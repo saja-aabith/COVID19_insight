@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Lookup1",
+				"name": "Lookup ECDC File List",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -34,11 +34,11 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "Execute copy for every record",
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Lookup1",
+						"activity": "Lookup ECDC File List",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -47,10 +47,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup1').output.value",
+						"value": "@activity('Lookup ECDC File List').output.value",
 						"type": "Expression"
 					},
-					"isSequential": true,
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Copy ECDC Data",
@@ -102,11 +102,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"baseURL": {
-											"value": "@pipeline().parameters.sourceBaseURL",
+											"value": "@item().sourceRelativeURL",
 											"type": "Expression"
 										},
 										"relativeURL": {
-											"value": "@pipeline().parameters.sourceRelativeURL",
+											"value": "@item().sourceBaseURL",
 											"type": "Expression"
 										}
 									}
@@ -114,7 +114,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_cases_deaths_raw_csv_dl",
+									"referenceName": "ds_ecdc_raw_csv_dl",
 									"type": "DatasetReference"
 								}
 							]
@@ -123,17 +123,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"sourceRelativeURL": {
-				"type": "string"
-			},
-			"sinkFileName": {
-				"type": "string"
-			},
-			"sourceBaseURL": {
-				"type": "string"
-			}
-		},
 		"variables": {
 			"sourceRelativeURL": {
 				"type": "String"
