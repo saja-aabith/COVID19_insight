@@ -14,6 +14,9 @@
 		"parameters": {
 			"baseURL": {
 				"type": "string"
+			},
+			"relativeURL": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -21,7 +24,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "covid19/nationalcasedeath/csv/data.csv"
+				"relativeUrl": {
+					"value": "@dataset().relativeURL",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
