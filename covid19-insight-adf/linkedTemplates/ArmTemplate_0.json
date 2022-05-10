@@ -125,7 +125,7 @@
 					"type": "LinkedServiceReference"
 				},
 				"parameters": {
-					"sinkFileName": {
+					"FileName": {
 						"type": "string"
 					}
 				},
@@ -135,7 +135,7 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": {
-							"value": "@dataset().sinkFileName",
+							"value": "@dataset().FileName",
 							"type": "Expression"
 						},
 						"folderPath": "ecdc",
@@ -377,7 +377,7 @@
 											"referenceName": "ds_ecdc_raw_csv_dl",
 											"type": "DatasetReference",
 											"parameters": {
-												"sinkFileName": {
+												"FileName": {
 													"value": "@item().sinkFileName",
 													"type": "Expression"
 												}
