@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"fileName": {
+			"sinkFileName": {
 				"type": "string"
 			}
 		},
@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().fileName",
+					"value": "@dataset().sinkFileName",
 					"type": "Expression"
 				},
 				"folderPath": "ecdc",

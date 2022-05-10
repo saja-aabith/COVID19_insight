@@ -115,7 +115,13 @@
 							"outputs": [
 								{
 									"referenceName": "ds_ecdc_raw_csv_dl",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"sinkFileName": {
+											"value": "@item().sinkFileName",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
