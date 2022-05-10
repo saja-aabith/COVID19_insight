@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().sinkFileName",
+					"value": "@dataset().FileName",
 					"type": "Expression"
 				},
 				"folderPath": "ecdc",
