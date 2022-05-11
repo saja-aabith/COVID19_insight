@@ -1,0 +1,9 @@
+{
+	"name": "covid19-insight-adf",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "582d688b-f5be-46e9-9650-9782aa506c38",
+		"tenantId": "220ec41d-762a-4194-8c39-75ada7e5c686"
+	}
+}
