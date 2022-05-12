@@ -1,9 +1,9 @@
 {
-	"name": "pl_ingest_population_data",
+	"name": "pl_ingest_2020_data",
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Population Data",
+				"name": "Copy 2020 Data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -38,8 +38,83 @@
 						}
 					},
 					"enableStaging": false,
+					"validateDataConsistency": true,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "date",
+									"type": "DateTime",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "county",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "county",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "state",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "state",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "fips",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "fips",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "cases",
+									"type": "Int32",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "cases",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "deaths",
+									"type": "Int32",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "deaths",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,

@@ -10,9 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "population_by_age_tsv",
-				"folderPath": "population",
-				"fileSystem": "raw"
+				"fileName": "us-counties-2020.csv",
+				"fileSystem": "pre-sql"
 			},
 			"columnDelimiter": "\t",
 			"escapeChar": "\\",
