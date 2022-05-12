@@ -6,5 +6,9 @@
 
 ### • The current level of analysis is at its' initial stages and will be further expanded to  go into state specific trends and other ways of representing the findings.
 
-### • A pipeline has also been setup in azure data factory as a way to automate the process of data gathering, trasforming and producing reports via PowerBI. the PowerBI dashboard can be accessed here: 
+### • A pipeline has also been setup in azure data factory as a way to automate the process of data gathering, trasforming and producing reports via PowerBI. The PowerBI file is included in this repo. A PowerBI dashboard will be accessible from a link soon (need a work email to have that activate that feature).
 
+### • Any feedback or comments are sincerely appreciated: dr.saja.aabith@gmail.com
+
+### Thank You
+### Saja
