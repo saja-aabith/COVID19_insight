@@ -39,82 +39,21 @@
 					},
 					"enableStaging": false,
 					"validateDataConsistency": true,
+					"logSettings": {
+						"enableCopyActivityLog": true,
+						"copyActivityLogSettings": {
+							"logLevel": "Warning",
+							"enableReliableLogging": true
+						},
+						"logLocationSettings": {
+							"linkedServiceName": {
+								"referenceName": "ls_adls_covid2019dl",
+								"type": "LinkedServiceReference"
+							}
+						}
+					},
 					"translator": {
 						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "date",
-									"type": "DateTime",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "date",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "county",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "county",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "state",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "state",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "fips",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "fips",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "cases",
-									"type": "Int32",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "cases",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "deaths",
-									"type": "Int32",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "deaths",
-									"type": "String",
-									"physicalType": "String"
-								}
-							}
-						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
