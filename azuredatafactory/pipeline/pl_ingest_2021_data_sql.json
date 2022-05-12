@@ -1,13 +1,13 @@
 {
-	"name": "pl_ingest_2020_data",
+	"name": "pl_ingest_2021_data_sql",
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy 2020 Data",
+				"name": "Copy 2021 Data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
-					"timeout": "0.00:05:00",
+					"timeout": "0.00:30:00",
 					"retry": 0,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
@@ -27,15 +27,11 @@
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
-						}
+						"type": "AzureSqlSink",
+						"preCopyScript": "TRUNCATE TABLE covid_reporting.cases_and_deaths_2021",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"validateDataConsistency": true,
@@ -63,13 +59,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_trends_2020_raw_csv",
+						"referenceName": "ds_trends_2021_raw_csv",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_trends_2020_result_csv",
+						"referenceName": "ds_sql_2021",
 						"type": "DatasetReference"
 					}
 				]

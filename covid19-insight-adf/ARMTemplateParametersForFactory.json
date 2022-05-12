@@ -11,11 +11,11 @@
 		"ls_adls_covid2019dl_accountKey": {
 			"value": ""
 		},
+		"ls_sql_2020_db_connectionString": {
+			"value": ""
+		},
 		"ls_adls_covid2019dl_properties_typeProperties_url": {
 			"value": "https://covid2019datalake.dfs.core.windows.net"
-		},
-		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
-			"value": "@{linkedService().sourceBaseURL}"
 		}
 	}
 }

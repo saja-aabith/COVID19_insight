@@ -1,0 +1,44 @@
+{
+	"name": "ds_sql_2020",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_2020_db",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "date",
+				"type": "date"
+			},
+			{
+				"name": "county",
+				"type": "varchar"
+			},
+			{
+				"name": "state",
+				"type": "varchar"
+			},
+			{
+				"name": "fips",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "cases",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "deaths",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "covid_reporting",
+			"table": "cases_and_deaths_2020"
+		}
+	}
+}
