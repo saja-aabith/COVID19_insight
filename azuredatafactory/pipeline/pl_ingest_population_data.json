@@ -49,13 +49,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_population_raw_gz",
+						"referenceName": "ds_trends_2020_raw_csv",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "ds_population_raw_tsv",
+						"referenceName": "ds_trends_2020_result_csv",
 						"type": "DatasetReference"
 					}
 				]

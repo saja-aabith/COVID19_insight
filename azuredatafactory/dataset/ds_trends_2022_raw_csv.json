@@ -1,5 +1,5 @@
 {
-	"name": "ds_trends_2020_raw_csv",
+	"name": "ds_trends_2022_raw_csv",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_ablolb_covidsa",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "us-counties-2020.csv",
+				"fileName": "us-counties-2022-Jan-May.csv",
 				"container": "trendsinterest"
 			},
 			"columnDelimiter": ",",
