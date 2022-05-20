@@ -8,6 +8,8 @@
 
 ### • A pipeline has also been setup in azure data factory as a way to automate the process of data gathering, transforming and producing PowerBI reports. The PowerBI file is included in this repo. A PowerBI dashboard will be accessible from a link soon (need a work email to have that activate that feature).
 
+### • Tech stack: Pandas, Azure data factory, PowerBI
+
 ### • Any feedback or comments are sincerely appreciated: dr.saja.aabith@gmail.com
 
 ### Thank You
